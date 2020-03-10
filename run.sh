@@ -22,7 +22,7 @@ fi
 
 export IMAGE_TAG=$(cat VERSION);
 export AARCH=`uname -m`;
-export NAME=sdat_frontend
+export NAME=reactbot
 
 if [ "$r_flag" = "true" ];
 then
