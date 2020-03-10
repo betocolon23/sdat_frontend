@@ -26,7 +26,7 @@ export NAME=reactbot
 
 if [ "$r_flag" = "true" ];
 then
-    docker build -t cachengo/$NAME-$AARCH:$IMAGE_TAG --build-arg REACT_APP=${REACT_APP} .
+    docker build -t $NAME-$AARCH:$IMAGE_TAG --build-arg REACT_APP=${REACT_APP} .
 fi
 
 docker stop $NAME;
@@ -35,4 +35,4 @@ docker rm $NAME;
 docker run -d \
   --net=mynet \
   --name=$NAME \
-  cachengo/$NAME-$AARCH:$IMAGE_TAG;
+  $NAME-$AARCH:$IMAGE_TAG;
